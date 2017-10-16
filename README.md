@@ -32,7 +32,7 @@ Add a number+timestamp+details to a graph of your choice, with notes displayed b
 
 1. A new database technology maybe?
   * Would it be faster to go with mysql since I know it vs learn something new since it might be useful and might be easier to implement with new frameworky tools? Are there tools that support simple node/express/mysql use?
-2. Running Express for data manip and a React App on the same server
+2. Running Express for access to data and a React App on the same server
 3. React router
 4. Redux
 5. Styled components
