@@ -30,13 +30,13 @@ Add a number+timestamp+details to a graph of your choice, with notes displayed b
 
 ## Learnings to be learned
 
-* A new database technology maybe?
+1. A new database technology maybe?
   * Would it be faster to go with mysql since I know it vs learn something new since it might be useful and might be easier to implement with new frameworky tools? Are there tools that support simple node/express/mysql use?
-* More Express knowledge
-  * React router
-  * Redux
-  * Styled components
-  * Data viz
-  * Stretch goal: Animation in data viz
-  * Ultra stretch goal: React Native
+2. More Express knowledge
+3. React router
+4. Redux
+5. Styled components
+6. Data viz
+7. Stretch goal: Animation in data viz
+8. Ultra stretch goal: React Native
 
