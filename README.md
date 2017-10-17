@@ -23,9 +23,37 @@ Add a number+timestamp+details to a graph of your choice, with notes displayed b
 ## App should:
 
 * Adjust for lack of data - if I forget/don't record for a while, just show gaps in the graph. That's fine, sorta gives a visual indication of how the reliable the graph is.
-  * Calculate for loss/gain over time - 
+* Calculate for loss/gain over time
   * How much am I spending now vs 3 months ago when I started watching where I was spending my money?
   * How much faster am I running?
+
+# Project
+
+## Phase 1: Front end
+  
+My #1 learning priority in the short term is Styled Components and working on my React skills. Will build the UI with static data
+
+* Design and create data structure as JSON
+	- See `docs/dataset.json` for structure
+	- Store "cache" of each day's number instead of recalculating everything on the fly
+* Create Express+React app
+	- [Create React App with Express Backend](https://daveceddia.com/create-react-app-express-backend/)
+	- [React+Express+Heroku](https://daveceddia.com/create-react-app-express-production/)
+* Build main app screen components
+  * Header/menu
+  * React Router
+  	- Load menu items as separate views
+  	- Wildcard sub-route for to load categories in data
+  * Date selector, change active date
+  * Daily entries table, show data from active date
+  	- Header: Current date
+  	- Body: Table of Time/Number/Notes
+  		+ Number field can have have optional pre-label like $ or post-label like kg
+  * Graph of number over time
+  	- Data viz library - d3?
+* Styled Components
+	- All of the above
+* Buttons to add new 
 
 
 ## Learnings to be learned
