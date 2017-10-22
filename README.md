@@ -1,4 +1,7 @@
 # numbers-over-time-chart
+
+## [View App](https://numbers-over-time.herokuapp.com/)
+
 This app will help you keep track of numbers over time, with info about those numbers.
 
 Add a number+timestamp+details to a graph of your choice, with notes displayed beneath for the current entry.
