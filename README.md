@@ -33,27 +33,27 @@ Add a number+timestamp+details to a graph of your choice, with notes displayed b
   
 My #1 learning priority in the short term is Styled Components and working on my React skills. Will build the UI with static data
 
-* Design and create data structure as JSON
+* [x] Design and create data structure as JSON
 	- See `docs/dataset.json` for structure
 	- Store "cache" of each day's number instead of recalculating everything on the fly
-* Create Express+React app
+* [x] Create Express+React app
 	- [Create React App with Express Backend](https://daveceddia.com/create-react-app-express-backend/)
 	- [React+Express+Heroku](https://daveceddia.com/create-react-app-express-production/)
-* Build main app screen components
-  * Header/menu
-  * React Router
+* [ ] Build main app screen components
+  * [ ] Header/menu
+  * [ ] React Router
   	- Load menu items as separate views
   	- Wildcard sub-route for to load categories in data
-  * Date selector, change active date
-  * Daily entries table, show data from active date
+  * [ ] Date selector, change active date
+  * [ ] Daily entries table, show data from active date
   	- Header: Current date
   	- Body: Table of Time/Number/Notes
   		+ Number field can have have optional pre-label like $ or post-label like kg
-  * Graph of number over time
+  * [ ] Graph of number over time
   	- Data viz library - d3?
-* Styled Components
+* [ ] Styled Components
 	- All of the above
-* Buttons to add new 
+* [ ] Buttons to add new 
 
 ## Notes and weird stuff
 
