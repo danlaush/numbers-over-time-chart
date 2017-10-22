@@ -55,6 +55,11 @@ My #1 learning priority in the short term is Styled Components and working on my
 	- All of the above
 * Buttons to add new 
 
+## Notes and weird stuff
+
+* Build process
+  - "The --production=false flag might look odd. It’s there because by default, yarn will not install devDependencies in production, and we need those (“react-scripts” in particular) to build the React app." via [Dave Ceddia](https://daveceddia.com/create-react-app-express-production/)
+
 
 ## Learnings to be learned
 
