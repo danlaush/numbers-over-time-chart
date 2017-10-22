@@ -1,30 +1,54 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Home from './routes/Home';
+import Category from './routes/Category';
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom';
+
+// const Topics = ({match}) => (
+//   <div>
+//     <h2>Topics</h2>
+//     <ul>
+//       <li><Link to={`${match.url}/rendering`}>
+//         Rendering with React
+//       </Link></li>
+//       <li><Link to={`${match.url}/components`}>
+//         Components
+//       </Link></li>
+//       <li><Link to={`${match.url}/props-v-state`}>
+//         Props vs State
+//       </Link></li>
+//     </ul>
+
+//     <Route path={`${match.url}/:topicId`} component={Topic} />
+//     <Route exact path={match.url} render={() => (
+//       <h3>Please select a topic</h3>
+//     )}/>
+//   </div>
+// );
+
+// const Topic = ({match}) => (
+//   <div>
+//     <h3>{match.params.topicId}</h3>
+//   </div>
+// )
 
 class App extends Component {
-  state = {users: []}
-
-  componentDidMount() {
-    // why fetch in cDM?
-    // https://daveceddia.com/where-fetch-data-componentwillmount-vs-componentdidmount/
-    fetch('/users')
-      .then(res => res.json())
-      .then(users => this.setState({ users }));
-  }
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <h2>Users</h2>
-        {this.state.users.map(user =>
-          <div key={user.id}>{user.username}</div>
-        )}
-      </div>
+      <Router>
+        <div className="App">
+          <Header />
+          <div>
+            <Route exact path="/" component={Home} />
+            <Route path="/category" component={Category} />
+          </div>
+        </div>
+      </Router>
     );
   }
 }

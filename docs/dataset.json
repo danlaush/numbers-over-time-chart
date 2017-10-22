@@ -1,53 +1,54 @@
-{
-	"categories": {
-		"1": {
-			"categoryName": "Weight",
-			"numberLabel": "kg",
-			"numberReducer": "avg",
-			"days": {
-				"2017-12-17": {
-					"number": 85,
-					"entries": {
-						"19:00": {
-							"number": 86,
-							"notes": "went running"
-						},
-						"08:30": {
-							"number": 84,
-							"notes": ""
-						}
+[
+	{
+		"id": 1,
+		"name": "Weight",
+		"numberLabel": "kg",
+		"numberReducer": "avg",
+		"days": [
+			{
+				"date": "2017-12-17",
+				"number": 85,
+				"entries": {
+					"19:00": {
+						"number": 86,
+						"notes": "went running"
+					},
+					"08:30": {
+						"number": 84,
+						"notes": ""
 					}
-				},
-				"2017-12-14": {
-					"number": 89,
-					"entries": {
-						"17:00": {
-							"number": 89,
-							"notes": "bbq night"
-						} 
+				}
+			},
+			{
+				"date": "2017-12-14",
+				"number": 89,
+				"entries": {
+					"17:00": {
+						"number": 89,
+						"notes": "bbq night"
+					} 
+				}
+			},
+			{
+				"date": "2017-12-10",
+				"number": 87,
+				"entries": {
+					"09:00": {
+						"number": 87,
+						"notes": ""
 					}
-				},
-				"2017-12-10": {
-					"number": 87,
-					"entries": {
-						"09:00": {
-							"number": 87,
-							"notes": ""
-						}
+				}
+			},
+			{
+				"date": "2017-12-07",
+				"number": 96,
+				"entries": {
+					"14:00": {
+						"number": 96,
+						"notes": ""
 					}
-				},
-				"2017-12-07": {
-					"number": 96,
-					"entries": {
-						"14:00": {
-							"number": 96,
-							"notes": ""
-						}
-					}
-				},
-
+				}
 			}
-		}
-
+		]
 	}
-}
+]

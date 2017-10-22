@@ -76,3 +76,19 @@ My #1 learning priority in the short term is Styled Components and working on my
 7. Stretch goal: Animation in data viz
 8. Ultra stretch goal: React Native
 
+## Routes & Components
+
+### Routes
+
+* [x] App
+  - [ ] Home
+  - [ ] Category
+
+### Components
+
+* [ ] Header
+* [ ] Chart
+* [ ] Current day
+  - [ ] Jumbo number
+  - [ ] Date
+  - [ ] List
