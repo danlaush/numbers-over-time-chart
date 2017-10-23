@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { format } from 'date-fns';
+import Chart from 'chart.js';
 import './Category.css';
 
 class Category extends Component {
@@ -20,7 +21,77 @@ class Category extends Component {
     prevDateEnabled: true
   }
 
+
   componentDidMount = () => {
+    this.chartCtx = document.getElementById('myChart').getContext('2d');
+    this.myChart = new Chart(this.chartCtx, {
+      type: 'line',
+      data: {
+        datasets: [{
+          label: '# of Votes',
+          data: [{
+            x: "2017-12-17",
+            y: 85
+          },{
+            x: "2017-12-14",
+            y: 89
+          },{
+            x: "2017-12-10",
+            y: 87
+          },{
+            x: "2017-12-07",
+            y: 96
+          }],
+          pointBackgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(255, 99, 132, 0.2)'
+          ],
+          pointBorderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(255,99,132,1)',
+            'rgba(255,99,132,1)',
+            'rgba(255,99,132,1)'
+          ],
+          pointRadius: [
+            4,
+            4,
+            4,
+            4
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        legend: {
+          display: false
+        },
+        tooltips: {
+          enabled: false
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            type: 'time'
+          }],
+          yAxes: [{
+            display: true
+          }]
+        },
+        onClick: function(evt, activeElements) {
+          if(activeElements[0] !== undefined) {
+            let elementIndex = activeElements[0]._index;
+            console.log(this.data.datasets[0].data[elementIndex]);
+            this.data.datasets[0].pointBackgroundColor[elementIndex] = 'black';
+            this.data.datasets[0].pointBorderColor[elementIndex] = 'green';
+            this.data.datasets[0].pointRadius[elementIndex] = 7;
+            this.update();
+          }
+        }
+      }
+    });
+
     // why fetch in cDM?
     // https://daveceddia.com/where-fetch-data-componentwillmount-vs-componentdidmount/
     fetch('/categories')
@@ -57,8 +128,10 @@ class Category extends Component {
       <div className="Category">
         
         <h2>Category: {this.state.name}</h2>
-
-        <div className="Category-activeNumber">{this.state.days[this.state.activeDate].number} {this.state.numberLabel}</div>
+        <div className="Category-jumbotron">
+          <canvas id="myChart" width="400" height="200"></canvas>
+          <div className="Category-activeNumber">{this.state.days[this.state.activeDate].number} {this.state.numberLabel}</div>
+        </div>
         <div className="Category-activeDate">
           <button 
             id="prevDate"
