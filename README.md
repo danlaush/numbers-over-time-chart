@@ -5,7 +5,7 @@
 This app will help you keep track of numbers over time, with info about those numbers.
 
 Add a number+timestamp+details to a graph of your choice, with notes displayed beneath for the current entry.
-
+ 
 ![Sketch of main app screen](https://github.com/danlaush/numbers-over-time-chart/blob/master/docs/sketch%20with%20notes.jpg?raw=true)
 
 ## Things I want to track:
