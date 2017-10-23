@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import {
-  Link
+  NavLink
 } from 'react-router-dom';
 
 const Header = () => (
@@ -12,8 +12,8 @@ const Header = () => (
 	  </div>
 	  <h1 className="Header-title">Numbers Over Time </h1>
 	  <ul className="Header-nav">
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/category">Category</Link></li>
+      <li><NavLink to="/" exact={true} activeClassName='is-active'>Home</NavLink></li>
+      <li><NavLink to="/category" activeClassName='is-active'>Category</NavLink></li>
     </ul>
 	</header>
 );

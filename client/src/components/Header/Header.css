@@ -37,6 +37,11 @@
 
 .Header-nav a {
   color: white;
+  font-weight: bold;
+}
+
+.Header-nav a.is-active {
+  text-decoration: none;
 }
 
 @keyframes Header-logo-spin {
